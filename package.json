@@ -10,7 +10,9 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "setup": "next lint"
+    "setup": "next lint",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.4.0",
@@ -21,9 +23,20 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@storybook/addon-actions": "^6.4.22",
+    "@storybook/addon-essentials": "^6.4.22",
+    "@storybook/addon-interactions": "^6.4.22",
+    "@storybook/addon-links": "^6.4.22",
+    "@storybook/builder-webpack5": "^6.4.22",
+    "@storybook/manager-webpack5": "^6.4.22",
+    "@storybook/react": "^6.4.22",
+    "@storybook/testing-library": "^0.0.11",
     "autoprefixer": "10.4.2",
+    "babel-loader": "^8.2.5",
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5",
+    "eslint-plugin-storybook": "^0.5.11",
     "postcss": "8.4.5",
     "tailwindcss": "^3.0.15"
   }
