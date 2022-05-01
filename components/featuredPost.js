@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import DateComponent from './date';
 
 export default function FeaturedPost({
   title,
   excerpt,
+  date,
   slug
 }) {
   return (
@@ -14,6 +16,10 @@ export default function FeaturedPost({
               <a className="hover:underline">{title}</a>
             </Link>
           </h3>
+          <div className="mb-4 md:mb-0 text-lg">
+            <DateComponent dateString={date} />
+          </div>
+          <p>{excerpt}</p>
         </div>
       </div>
     </section>
