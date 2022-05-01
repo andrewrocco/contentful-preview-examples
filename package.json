@@ -1,0 +1,9 @@
+{
+  "name": "contentful-preview-examples",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:andrewrocco/contentful-preview-examples.git",
+  "author": "Andrew Rossi",
+  "license": "MIT",
+  "private": true
+}
