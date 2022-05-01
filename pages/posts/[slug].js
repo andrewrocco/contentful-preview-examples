@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import ErrorPage from 'next/error';
+import Link from 'next/link';
 
 import Container from '../../components/container';
 import Layout from '../../components/layout';
@@ -26,6 +27,11 @@ export default function Post({ post, morePost, preview }) {
               <Head>
                 <title>{post.title} | This is my blog!</title>
               </Head>
+              
+              <Link href="/" passHref>
+                <a className="text-blue-500">&larr; Back Home</a>
+              </Link>
+              
               <h1 className="text-3xl mb-3 leading-snug">{post.title}</h1>
               <div className="mb-6 text-lg">
                 <DateComponent dateString={post.publishDate} />
