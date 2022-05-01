@@ -9,5 +9,5 @@ const Template = (args) => <AuthorCard {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  name: "Andy Rossi"
+  name: "Chris Christopherson"
 };
