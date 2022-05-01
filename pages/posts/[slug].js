@@ -4,6 +4,8 @@ import ErrorPage from 'next/error';
 
 import Container from '../../components/container';
 import Layout from '../../components/layout';
+import DateComponent from '../../components/date';
+import PostBody from '../../components/postBody';
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api';
 
 export default function Post({ post, morePost, preview }) {
@@ -18,7 +20,20 @@ export default function Post({ post, morePost, preview }) {
       <Container>
         {router.isFallback ? (
           <h1>Loading...</h1>
-        ) : (<div>Hello</div>)}
+        ) : (
+          <>
+            <article className="mt-10">
+              <Head>
+                <title>{post.title} | This is my blog!</title>
+              </Head>
+              <h1 className="text-3xl mb-3 leading-snug">{post.title}</h1>
+              <div className="mb-6 text-lg">
+                <DateComponent dateString={post.publishDate} />
+              </div>
+              <PostBody body={post.body} />
+            </article>
+          </>
+        )}
       </Container>
     </Layout>
   );
