@@ -41,11 +41,14 @@ export default function Post({ post, morePost, preview }) {
               <div className="max-w-2xl mx-auto">
                 <PostBody body={post.body} />
                 
-                <AuthorCard
-                  image={post.author.picture}
-                  name={post.author.name}
-                  bio={post.author.bio}
-                />
+                {post.author &&
+                  <AuthorCard
+                    image={post.author.picture}
+                    name={post.author.name}
+                    bio={post.author.bio}
+                  
+                  />
+                }
               </div>
             </article>
           </>
