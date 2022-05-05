@@ -37,7 +37,7 @@ For changing Storybook URL args after render, we used the `useArgs` hook. For mo
 This use can be found in the `authorCard.stories.js` file: https://github.com/andrewrocco/contentful-preview-examples/blob/main/stories/authorCard.stories.js
 
 ## Setup
-This project runs on `node 16.15.0`. Before pulling any data from Contentful, please create a `.env` file based off `.env.sample` and add the following environment variable values:
+This project runs on `node 16.15.0`. Before pulling any data from Contentful, please create a `.env.local` file based off `.env.sample` and add the following environment variable values:
 
 ```
 CONTENTFUL_SPACE_ID=space ID
@@ -45,6 +45,12 @@ CONTENTFUL_ACCESS_TOKEN=CDA token
 CONTENTFUL_PREVIEW_ACCESS_TOKEN=CPA token
 CONTENTFUL_PREVIEW_SECRET=any value you want
 ```
+
+### Preview URLs
+For **Author**: `http://localhost:6006/?path=/story/components-author-card--primary&args=name:{entry.fields.name};bio:{entry.fields.bio};imageId:{entry.fields.picture.sys.id}`
+For **Blog Post**: `http://localhost:3000/api/preview?secret=<CONTENTFUL_PREVIEW_SECRET>&slug={entry.fields.slug}`
+
+Replace `<CONTENTFUL_PREVIEW_SECRET>` with the secret value from your `.env.local` file.
 
 ### Installation
 Run `yarn`
