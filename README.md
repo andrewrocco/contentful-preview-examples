@@ -30,7 +30,11 @@ It uses the following technologies:
 | Bio | long text |
 
 ## Differences
-This project incorporates the use of Storybook as an alternative preview environment. Contentful's Preview URLs do not support resolving reference fields. So, we had to add a little custom spice to the project to pull assets via asset IDs provided through URL tokens.
+This project incorporates the use of Storybook as an alternative preview environment. Contentful's Preview URLs do not support resolving reference fields. So, we had to add a little custom spice to the project to pull assets via asset IDs provided through URL tokens. Also, Storybook doesn't support Tailwind.css out of the box, so a custom `main.js` was necessary to add this capability.
+
+For changing Storybook URL args after render, we used the `useArgs` hook. For more information, check out the API documentation: https://storybook.js.org/docs/react/addons/addons-api#useargs
+
+This use can be found in the `authorCard.stories.js` file: https://github.com/andrewrocco/contentful-preview-examples/blob/main/stories/authorCard.stories.js
 
 ## Setup
 This project runs on `node 16.15.0`. Before pulling any data from Contentful, please create a `.env` file based off `.env.sample` and add the following environment variable values:
