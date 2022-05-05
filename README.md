@@ -48,6 +48,7 @@ CONTENTFUL_PREVIEW_SECRET=any value you want
 
 ### Preview URLs
 For **Author**: `http://localhost:6006/?path=/story/components-author-card--primary&args=name:{entry.fields.name};bio:{entry.fields.bio};imageId:{entry.fields.picture.sys.id}`
+
 For **Blog Post**: `http://localhost:3000/api/preview?secret=<CONTENTFUL_PREVIEW_SECRET>&slug={entry.fields.slug}`
 
 Replace `<CONTENTFUL_PREVIEW_SECRET>` with the secret value from your `.env.local` file.
