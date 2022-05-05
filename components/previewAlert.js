@@ -11,9 +11,9 @@ export default function Alert({ preview }) {
               This is page is a preview.{' '}
               <Link
                 href="/api/exit-preview"
-                className="underline hover:text-cyan duration-200 transition-colors"
+                passHref
               >
-                Click here
+                <a className="underline">Click here</a>
               </Link>{' '}
               to exit preview mode.
             </>
