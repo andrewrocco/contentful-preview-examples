@@ -46,7 +46,6 @@ export default function Post({ post, morePost, preview }) {
                     image={post.author.picture}
                     name={post.author.name}
                     bio={post.author.bio}
-                  
                   />
                 }
               </div>
