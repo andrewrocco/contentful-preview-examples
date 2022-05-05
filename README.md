@@ -48,7 +48,9 @@ Run `yarn`
 ### Commands
 #### Next.js environment
 Run `yarn dev` to run the development environment.
+
 Run `yarn build` to build a production bundle.
+
 Run `yarn start` to serve the production bundle.
 
 Run `yarn storybook` to view the Storybook instance.
