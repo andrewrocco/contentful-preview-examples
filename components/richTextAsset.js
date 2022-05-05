@@ -1,8 +1,5 @@
-import Image from 'next/image'
-
-const contentfulLoader = ({ src, width, quality }) => {
-  return `${src}?w=${width}&q=${quality || 65}&fm=webp`
-}
+import Image from 'next/image';
+import { contentfulLoader } from '../lib/contentfulLoader';
 
 export default function RichTextAsset({ id, assets }) {
   const asset = assets?.find((asset) => asset.sys.id === id)

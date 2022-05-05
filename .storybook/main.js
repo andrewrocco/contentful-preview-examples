@@ -12,7 +12,7 @@ module.exports = {
   ],
   "framework": "@storybook/react",
   "core": {
-    "builder": "@storybook/builder-webpack5"
+    "builder": "webpack5"
   },
   webpackFinal: (config) => {
     config.module.rules.push({
@@ -30,5 +30,5 @@ module.exports = {
       include: path.resolve(__dirname, "../"),
     });
     return config;
-  },
+  }
 }

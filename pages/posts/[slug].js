@@ -7,6 +7,7 @@ import Container from '../../components/container';
 import Layout from '../../components/layout';
 import DateComponent from '../../components/date';
 import PostBody from '../../components/postBody';
+import AuthorCard from '../../components/authorCard';
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api';
 
 export default function Post({ post, morePost, preview }) {
@@ -36,7 +37,18 @@ export default function Post({ post, morePost, preview }) {
               <div className="mb-6 text-lg">
                 <DateComponent dateString={post.publishDate} />
               </div>
-              <PostBody body={post.body} />
+
+              <div className="max-w-2xl mx-auto">
+                <PostBody body={post.body} />
+                
+                {post.author &&
+                  <AuthorCard
+                    image={post.author.picture}
+                    name={post.author.name}
+                    bio={post.author.bio}
+                  />
+                }
+              </div>
             </article>
           </>
         )}
