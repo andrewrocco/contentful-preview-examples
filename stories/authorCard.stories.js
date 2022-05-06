@@ -11,7 +11,6 @@ let customArgs = null;
 
 const Template = (args) => {
   if (args.imageId) {
-    const [_, updateArgs] = useArgs();
     getImageById(args.imageId).then((resp) => {
       return updateArgs({
         ...args,
@@ -21,6 +20,9 @@ const Template = (args) => {
         }},);
     });
   }
+
+  // update args after an attempted remote image load
+  const [_, updateArgs] = useArgs();
 
   return <AuthorCard {...args} />
 };
