@@ -17,7 +17,7 @@ const Template = (args) => {
         ...args,
         image: {
           url: resp.data.asset.url,
-          altText: resp.data.asset.description
+          description: resp.data.asset.description
         }},);
     });
   }
@@ -33,6 +33,6 @@ Primary.args = {
   imageId: "", // set to be overwritten by args value
   image: {
     url: "https://picsum.photos/60/60",
-    altText: "This is some alt text",
+    description: "This is some alt text",
   },
 };
